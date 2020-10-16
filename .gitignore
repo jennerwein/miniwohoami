@@ -2,6 +2,7 @@ node_modules/
 homepage/
 .wordpress/
 npm-debug.log
+README_MY.md
 !.gitignore
 
 # ignore packaged files
