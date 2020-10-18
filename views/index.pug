@@ -1,17 +1,32 @@
 html
   head
-    title Miniwhoami
+    title MiniWhoami
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    
     link(link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
 
-    body.container
-    table.table-bordered.table-sm
-      tbody
-        tr(style={background: '#'+(hostname+'ffffff').slice(0,6)})
-          td MiniWhoami
-          td='#'+(hostname+'ffffff').slice(0,6)
-        tr
-          td Hostname
-          td= hostname
-        tr
-          td Local Address:
-          td= ipaddress
+    style.
+      thead {
+      text-align: left;
+      }
+      .container {
+      }
+
+    body.container  
+      div.form-control-sm.text-secondary.text-left.font-weight-light.font-italic docker pull jennerwein/miniwhoami
+        table.table-bordered.table-sm
+          tbody
+            tr(style="text-align:center; font-weight: bold")
+              td(colspan=2, style={background: bgcolor, color: fgcolor}) MiniWhoami
+            tr
+              td Hostname
+              td= hostname
+            tr
+              td Local IPv4 Address:
+              td= ipaddress
+            tr
+              td Local IPv6 Address:
+              td= local_ipv6
+            tr
+              td Counter:
+              td= counter
