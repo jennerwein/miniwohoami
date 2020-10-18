@@ -10,7 +10,9 @@ const internalIp = require('internal-ip');
 console.log("miniwhoami starting at port 8080 ...");
 
 bgcolor = '#' + (os.hostname() + 'ffffff').slice(0, 6)
-bgcolor = '#cd0aee'
+
+// Set background color just for testing.
+//bgcolor = '#cd0aee'
 
 if (colorbrightness.helligkeit(bgcolor) > 130) {
   fgcolor = "#000000"
