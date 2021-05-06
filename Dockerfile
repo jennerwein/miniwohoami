@@ -3,6 +3,6 @@ FROM node:13-alpine
 COPY . .
 RUN npm install
 
-EXPOSE 8080
+EXPOSE 80
 ENTRYPOINT ["node", "miniwhoami.js"]
 

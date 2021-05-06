@@ -1,12 +1,12 @@
 const express = require('express')
 const colorbrightness = require('./colorbrightness.js');
 const app = express()
-const port = 8080
+const port = 80
 
 const os = require('os');
 const internalIp = require('internal-ip');
 
-console.log("miniwhoami starting at port 8080 ...");
+console.log("miniwhoami v2.2 starting at port ${port} ...");
 
 bgcolor = '#' + (os.hostname() + 'ffffff').slice(0, 6)
 
